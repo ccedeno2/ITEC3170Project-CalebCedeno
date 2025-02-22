@@ -1,0 +1,9 @@
+# ITEC3170 Project Documentation
+
+## Dataset Selection
+- Global EV Sales: 2010-2024
+- Kaggle Dataset: https://www.kaggle.com/datasets/patricklford/global-ev-sales-2010-2024
+- Description: Global EV Data: 2010-2024, with some predictions for 2025-2035 (China, North America, Other (grouped regions) and the World).
+- Why This dataset?: With emerging technologies like AI and self driving capabilities,
+the EV world generates interest in me on how the automotive market has changed in the
+las decade.
