@@ -1,7 +1,90 @@
 # ITEC3170 Project Documentation
 
+
+
 ## Dataset Selection
+- Hypothesis: The EV market has grown more over the last decade in developed countries than those not considered as developed.
+- Problem Statement: This projects aims to analyze a public dataset on EV records over the past decade which include its growing market share, sales, charging points, etc. to determine whether being a developed/underdeveloped country has influence over its growth
 - Global EV Sales: 2010-2024
 - Kaggle Dataset: https://www.kaggle.com/datasets/patricklford/global-ev-sales-2010-2024
 - Description: Global EV Data: 2010-2024, with some predictions for 2025-2035 (China, North America, Other (grouped regions) and the World).
 - Why This dataset?: With emerging technologies like AI and self driving capabilities, the EV world generates interest in me on how the automotive market has changed in the last decade.
+
+## Dataset manipulation
+- Downloading the dataset using curl: My dataset is from kaggle, which requires authentication before downloading from the site, so you can't directly download from it.Instead I used the following commands after manually downloading
+
+git add GlobalEVSales2024.csv
+git commit -m "Added EV sales dataset"
+git push origin main.
+
+-Inspect the data using head: The following code was entered with the following results
+
+head -5 GlobalEVSales2024.csv
+region,category,parameter,mode,powertrain,year,unit,value
+Australia,Historical,EV stock share,Cars,EV,2011,percent,0.000390000001062
+Australia,Historical,EV sales share,Cars,EV,2011,percent,0.00650000013411
+Australia,Historical,EV sales,Cars,BEV,2011,Vehicles,49
+Australia,Historical,EV stock,Cars,BEV,2011,Vehicles,49
+
+With there being only 8 columns, which are not that many, I would like to keep the dataset as is to not lose any potential relevant information down the line.
+
+- awk command to gather initial data:
+
+ awk -F ',' '{count[$1]++} END {for (val in count) print val, count[val]}' GlobalEVSales2024.csv
+Norway 270
+Estonia 25
+Thailand 14
+USA 737
+Denmark 319
+Finland 200
+Turkiye 83
+Netherlands 358
+Australia 94
+France 358
+New Zealand 185
+Mexico 87
+Poland 194
+Czech Republic 24
+Seychelles 18
+Hungary 27
+South Africa 83
+Chile 103
+United Arab Emirates 18
+China 1138
+Cyprus 14
+Latvia 27
+Portugal 189
+Ireland 27
+Switzerland 245
+Rest of the world 954
+Sweden 269
+Slovakia 23
+Luxembourg 15
+Indonesia 8
+Lithuania 19
+India 702
+Slovenia 24
+Iceland 115
+Greece 83
+Korea 209
+Bulgaria 25
+region 1
+Croatia 15
+Canada 240
+Romania 19
+Colombia 27
+Japan 260
+United Kingdom 345
+Europe 1234
+Austria 116
+World 1250
+Israel 148
+Germany 298
+Costa Rica 27
+Italy 230
+Belgium 310
+Spain 245
+EU27 424
+Brazil 183
+
+When performing this awk command to count instances of the unique values in column 1 which is 'region', we can see how developed countries have more entries or records within the dataset, than those countries not considered as developed. Example, if we compare the 'USA' entries at 737, against 'Costa Rica' which only accounts for 27 records. We can clearyl see tha disparity and how there have not been many EV data points in this country over the last decade.
