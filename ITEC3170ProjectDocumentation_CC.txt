@@ -88,4 +88,7 @@ Spain 245
 EU27 424
 Brazil 183
 
-When performing this awk command to count instances of the unique values in column 1 which is 'region', we can see how developed countries have more entries or records within the dataset, than those countries not considered as developed. Example, if we compare the 'USA' entries at 737, against 'Costa Rica' which only accounts for 27 records. We can clearyl see tha disparity and how there have not been many EV data points in this country over the last decade.
+## Analyisis
+When performing this awk command to count instances of the unique values in column 1 which is 'region', we can see how developed countries have more entries or records within the dataset, than those countries not considered as developed. Example, if we compare the 'USA' entries at 737, against 'Costa Rica' which only accounts for 27 records. We can clearly see the disparity and how there have not been many EV data points in this country over the last decade.
+
+Let's see some more examples. Canada with 247 entries, Finland 200, Denmark 319, all triple digits. Compared against Colombia with 27 entries, Cyprus at 14, Seychelles 18. We can clearly see triple digit records for developed countries when examples of developing or underdeveloped countries have double digit entries at best.
