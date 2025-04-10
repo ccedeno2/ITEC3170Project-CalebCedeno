@@ -194,3 +194,8 @@ Chile,EV sales,2023,510
 Chile,EV sales,2023,410
 
 We can see the difference in data points for each year, as well as compare 2023 EV sales numbers which in this case total up to 920 only.
+
+## Problems with Hadoop
+I'm having major issues doing the requested with Hadoop. Instead I used python with  pandas for basic data processing due to my dataset not being extremely large.
+
+I created a Python process_ev_sales.py script
