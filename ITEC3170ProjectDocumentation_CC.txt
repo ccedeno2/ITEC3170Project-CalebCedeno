@@ -3,7 +3,8 @@
 
 
 ## Dataset Selection
-- Hypothesis: The EV market has grown more over the last decade in developed countries than those not considered as developed.
+- Hypothesis: The EV market has grown more over the last decade in developed countries than those developing countries.
+- Developed Country: Characterized by high quality of life, developed economy, and advanced technological infrastructure compared to less industrialized nations, often measured by GDP. eg: United States, Canada, Japan, many countries in Europe, and Australia.
 - Problem Statement: This projects aims to analyze a public dataset on EV records over the past decade which include its growing market share, sales, charging points, etc. to determine whether being a developed/underdeveloped country has influence over its growth
 - Global EV Sales: 2010-2024
 - Kaggle Dataset: https://www.kaggle.com/datasets/patricklford/global-ev-sales-2010-2024
